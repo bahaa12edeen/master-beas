@@ -1,0 +1,138 @@
+.logoR{
+    min-height: 130px;
+    min-width: 130px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px dotted rgb(65, 75, 178);
+    border-radius: 100%;
+    margin: 0;
+    justify-content: space-around;
+    user-select: none;
+}
+
+.dotR{
+    display: inline-block;
+    background-color: rgb(65, 75, 178);
+    padding: 2px;
+    max-width: 0;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.dashR{
+    padding: 0.4px;
+    background-color: rgb(65, 75, 178);
+    width: 40%;
+    margin: 0 auto;
+}
+
+.txt{
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.form input {
+    border: 2px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+label {
+    font-size: 18px;
+}
+
+.form button {
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 0px !important;
+    background-color: #414BB2;
+    border: 0;
+    color: white;
+    border-radius: 3px !important;
+}
+
+.rows {
+    margin-top: 10px;
+}
+
+.warr {
+    color: red;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    background-color: white;
+    padding: 2px;
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    display: none;
+    white-space: nowrap;
+}
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+#birth{
+    margin-bottom: 15px;
+}
+
+.login{
+    margin-top: 15px !important;
+}
+
+.navR{
+    color: rgb(65, 75, 178);
+    margin: 0;
+    padding-top: 15px;
+}
+
+.tabR{
+    color: rgb(65, 75, 178);
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.tabR a{
+    color: rgb(65, 75, 178);
+    text-decoration: none;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}

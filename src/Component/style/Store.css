@@ -1,0 +1,174 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.headerS{
+  height: 100vh;
+  background-image: url("../images/beach8.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.headparentS{
+  background-color: rgba(30, 30, 30, 0.258);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  color: white;
+}
+
+.title{
+  text-align: center;
+  font-family: 'Cinzel',serif;
+  font-size: 5.6rem;
+  font-weight: 900;
+  min-width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo{
+  min-height: 130px;
+  min-width: 130px;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 2px dotted white;
+  border-radius: 100%;
+  margin: 0;
+  justify-content: space-around;
+  user-select: none;
+}
+
+.dot{
+  display: inline-block;
+  background-color: white;
+  padding: 2px;
+  max-width: 0;
+  margin: 0 auto;
+  border-radius: 100%;
+}
+
+.dash{
+  padding: 0.4px;
+  background-color: white;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.txt{
+  word-wrap: break-word;
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 45px auto;
+}
+
+.tab{
+  /* display: inline-block; */
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.tab a{
+  color: white;
+  text-decoration: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+footer{
+  background-color: #1a1a1a;
+}
+
+footer h2{
+  margin-top: 5px;
+  font-family: sans-serif;
+}
+
+footer p{
+  font-family: sans-serif;
+}
+
+.arr{
+  margin: 20px auto;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes down {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(30%);
+  }
+}
+
+.arr{
+  animation : down 1.4s linear infinite; 
+}
+
+.product{
+  /* width: 100%; */
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.name{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px 0;
+}
+
+.list input{
+  box-sizing: content-box;
+  width: 55px;
+  border: 1.3px solid #414BB2;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.list input[type="text"]{
+  text-align: center;
+}
+
+.list input[type="number"]{
+  margin-right: 15px;
+}
+
+.list button{
+  background-color: #414BB2;
+  color: white;
+  padding: 10px 17px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
