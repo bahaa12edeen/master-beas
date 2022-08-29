@@ -6,6 +6,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Login() {
 
+    const logout = ()=>{
+        sessionStorage.setItem('user_id', null);
+          window.location.href = "/";
+        }
+
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
@@ -62,9 +67,9 @@ function Login() {
                     {/* </p> */}
                 </div>
                 <div className="tabR">
-                    <Link to="/Cart">CART</Link>
+                    <Link to={sessionStorage.getItem('user_id')>0?"/Cart":"/Login"}>CART</Link>
                     {console.log(sessionStorage.getItem('user_id')!="null")}
-                    {sessionStorage.getItem('user_id')!="null"?<><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></>:<Link to="/Acount">ACOUNT</Link>}
+                    {sessionStorage.getItem('user_id')=="null"?<><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></>:<><Link to="/Acount">ACOUNT</Link><span onClick={logout} className='out'>LOGOUT</span></>}
                 </div>
             </nav>
             <div style={{ height: "100vh" }}>

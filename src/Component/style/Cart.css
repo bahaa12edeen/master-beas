@@ -42,14 +42,15 @@ td{
 
 .change{
   width: fit-content;
-  padding: 15px 35px;
-  background-color: #17868e;
+  padding: 10px 30px;
+  background-color: rgb(65, 75, 178);
   border-radius: 5px;
   color: white;
   /* font-family: sans-serif; */
   user-select: none;
   cursor: pointer;
   margin: auto;
+  font-size: 1.5rem;
 }
 
 .total{
@@ -104,4 +105,18 @@ footer img {
   right: 24px;
   padding: 5px;
   color: #063e42;
+}
+
+.x{
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.x:hover{
+  color: #0a50b9;
+}
+
+.empty1{
+  text-align: center;
+  font-size: large;
 }

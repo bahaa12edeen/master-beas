@@ -172,3 +172,26 @@ footer p{
   border-radius: 3px;
   cursor: pointer;
 }
+
+.addCart:hover{
+  /* transition: all 1s; */
+  transition: outline .2s linear;
+  outline: 5px #061af042 solid;
+  border-radius: 3px;
+}
+
+.addCart:active{
+  transition: outline .01s linear;
+  outline: 5px #9dff00 solid;
+  border-radius: 3px;
+}
+
+.cart{
+  background-color: white;
+  color: #414BB2;
+  padding: 10px 15px;
+  border-radius: 100px;
+  margin-right: 5px;
+  user-select: none;
+  cursor: pointer;
+}

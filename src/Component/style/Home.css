@@ -194,3 +194,13 @@ footer p{
 .tab a:hover{
   color: white !important;
 }
+
+.out{
+  font-size: 18px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.card img{
+  border-radius: 0.25rem 0.25rem 0 0;
+}

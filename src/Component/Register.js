@@ -7,10 +7,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Register() {
 
-    // useEffect(() => {
-    //     document.getElementById('nav').style.display = "none";
-    // })
-
+    const logout = ()=>{
+        sessionStorage.setItem('user_id', null);
+          window.location.href = "/";
+        }
+        
     const nameReg = /^[A-Za-z]+$/;
 
     const [fname, setFname] = useState('');
@@ -256,8 +257,9 @@ function Register() {
                     {/* </p> */}
                 </div>
                 <div className="tabR">
-                <Link to="/Cart">CART</Link>
-                {sessionStorage.getItem('user_id')!="null"?<><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></>:<Link to="/Acount">ACOUNT</Link>}                </div>
+                <Link to={sessionStorage.getItem('user_id')>0?"/Cart":"/Login"}>CART</Link>
+                {sessionStorage.getItem('user_id')=="null"?<><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></>:<><Link to="/Acount">ACOUNT</Link><span onClick={logout} className='out'>LOGOUT</span></>}
+                </div>
             </nav>
 
             <div style={{ height: "100vh", display: "flex" }}>

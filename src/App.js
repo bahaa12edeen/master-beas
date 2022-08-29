@@ -7,11 +7,12 @@ import Login from './Component/Login';
 import Register from './Component/Register';
 import Add from './Component/Add';
 import Update from './Component/Update';
-import Nav from "./Component/Nav";
 import Footer from "./Component/Footer";
 import Store from "./Component/Store";
 import Dive from "./Component/Dive";
 import Cart from "./Component/Cart";
+import Check from "./Component/Check";
+import Acount from "./Component/Acount";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
           <Route path='/Store' element={<Store />}></Route>
           <Route path='/Dive' element={<Dive />}></Route>
           <Route path='/Cart' element={<Cart />}></Route>
-          <Route path='/Logout' element={<Home id={null} />}></Route>
+          <Route path='/Check' element={<Check />}></Route>
+          <Route path='/Acount' element={<Acount />}></Route>
         </Routes>
 
         <Footer />

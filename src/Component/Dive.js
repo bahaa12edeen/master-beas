@@ -8,6 +8,13 @@ import img5 from "./images/s1.png";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Dive() {
+
+  const logout = () => {
+    sessionStorage.setItem('user_id', null);
+    sessionStorage.setItem('cartQaunt', 0);
+    window.location.href = "/";
+  }
+
   return (
     <>
 
@@ -35,8 +42,14 @@ function Dive() {
               {/* </p> */}
             </div>
             <div className="tab">
-            <Link to="/Cart">CART</Link>
-            {sessionStorage.getItem('user_id')!="null"?<><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></>:<Link to="/Acount">ACOUNT</Link>}            </div>
+              <Link to={sessionStorage.getItem('user_id')>0?"/Cart":"/Login"}>
+              <span 
+              style={{ display: sessionStorage.getItem('user_id')>0?"inline":"none"}}
+              className='cart'>{sessionStorage.getItem('cartQaunt')}</span>
+                CART
+              </Link>
+              {sessionStorage.getItem('user_id') == "null" ? <><Link to="/Login">LOGIN</Link><Link to="/Register">REGISTER</Link></> : <><Link to="/Acount">ACOUNT</Link><span onClick={logout} className='out'>LOGOUT</span></>}
+            </div>
           </nav>
 
           <div className="title">DIVING&nbsp;TRIPS</div>
